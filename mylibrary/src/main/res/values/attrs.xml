@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 圆形进度条 ProgressCircle-->
+    <declare-styleable name="ProgressCircle">
+        <attr name="RoundColor" format="color" />
+        <attr name="RoundProgressColor" format="color" />
+        <attr name="RoundWidth" format="dimension" />
+        <attr name="RoundText" format="string" />
+        <attr name="RoundTextSize" format="dimension" />
+        <attr name="RoundTextColor" format="color" />
+    </declare-styleable>
+
+
+    <!-- 线性进度条 ProgessLineView-->
+    <declare-styleable name="ProgessLineView">
+        <attr name="ProgressLine_bmColor" format="color" />
+        <attr name="ProgressLine_color" format="color" />
+        <attr name="ProgressLine_bmHight" format="dimension" />
+        <attr name="ProgressLine_hight" format="dimension" />
+        <attr name="ProgressLine_TextColor" format="color" />
+        <attr name="ProgressLine_TextSize" format="dimension" />
+        <attr name="ProgressLine_Text" format="string" />
+
+        <attr name="ProgressLine_RTextColor" format="color" />
+        <attr name="ProgressLine_RTextSize" format="dimension" />
+        <attr name="ProgressLine_RText" format="string" />
+    </declare-styleable>
+
+</resources>
