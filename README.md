@@ -26,20 +26,22 @@ Step 2. Add the dependency
   用法如下：
 
 
-   <com.lucien3344.progress_view.widget.ProgressCircleView
-          android:id="@+id/circleProgressBar"
-          android:layout_width="230dp"
-          android:layout_height="230dp"
-          android:layout_centerInParent="true"
-          android:layout_gravity="center_horizontal"
-          android:layout_marginTop="15dp"
-          android:visibility="visible"
-          app:RoundColor="@color/color_line"
-          app:RoundProgressColor="@color/toolbar"
-          app:RoundText=""
-          app:RoundTextColor="@color/black_8a"
-          app:RoundTextSize="45sp"
-          app:RoundWidth="17dp" />
+    <com.lucien3344.progress_view.widget.ProgressCircleView
+        android:id="@+id/circleProgressBar"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:visibility="visible"
+        app:RoundColor="@color/color_line"
+        app:RoundProgressColor="@color/toolbar"
+        app:RoundText=""
+        app:RoundTextColor="@color/black_8a"
+        app:RoundTextSize="45sp"
+        app:RoundWidth="17dp" />
+
+
 
       <com.lucien3344.progress_view.widget.ProgessLineView
           android:id="@+id/progresline_sys"
