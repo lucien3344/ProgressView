@@ -3,4 +3,15 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+
+    <color name="color_line">#EEEEEE</color>
+
+    <color name="color_text">#222222</color>
+    <color name="black_51">#515151</color>
+    <color name="black_8a">#8a8a8a</color>
+    <color name="undone">#EF4E4E</color>
+    <color name="undone_60">#FFCD42</color>
+
+    <color name="toolbar">#62ABF5</color>
 </resources>

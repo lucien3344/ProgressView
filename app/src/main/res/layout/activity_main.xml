@@ -1,20 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black_8a"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <com.lucien3344.progress_view.widget.ProgressCircleView
+        android:id="@+id/circleProgressBar"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:visibility="visible"
+        app:RoundColor="@color/color_line"
+        app:RoundProgressColor="@color/toolbar"
+        app:RoundText=""
+        app:RoundTextColor="@color/black_8a"
+        app:RoundTextSize="45sp"
+        app:RoundWidth="17dp" />
+
+    <com.lucien3344.progress_view.widget.ProgessLineView
+        android:id="@+id/progresline_sys"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="18dp"
+        app:ProgressLine_RTextColor="@color/color_text"
+        app:ProgressLine_RTextSize="15sp"
+        app:ProgressLine_Text="说一说"
+        app:ProgressLine_TextColor="@color/color_text"
+        app:ProgressLine_TextSize="15sp"
+        app:ProgressLine_bmColor="@color/color_line"
+        app:ProgressLine_bmHight="13dp"
+        app:ProgressLine_color="@color/toolbar"
+        app:ProgressLine_hight="13dp" />
 
 
+    <com.lucien3344.progress_view.widget.ProgessLineView
+        android:id="@+id/progresline_xyx"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
+        app:ProgressLine_RTextColor="@color/color_text"
+        app:ProgressLine_RTextSize="15sp"
+        app:ProgressLine_Text="学一学"
+        app:ProgressLine_TextColor="@color/color_text"
+        app:ProgressLine_TextSize="15sp"
+        app:ProgressLine_bmColor="@color/color_line"
+        app:ProgressLine_bmHight="13dp"
+        app:ProgressLine_color="@color/undone_60"
+        app:ProgressLine_hight="13dp" />
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
