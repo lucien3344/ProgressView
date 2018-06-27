@@ -1,5 +1,5 @@
 # ProgressView
-ProgressView_v1.0
+ProgressView_v1.1
 
 
 
@@ -18,7 +18,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.lucien3344:ProgressView:v1.0'
+	        implementation 'com.github.lucien3344:ProgressView:v1.1'
 	}
   
   
