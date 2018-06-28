@@ -48,7 +48,6 @@
         app:ProgressLine_color="@color/color"
         app:ProgressLine_hight="13dp" />
 
-
     <com.lucien3344.progress_view.widget.ProgessLineView
         android:id="@+id/progresline_xyx"
         android:layout_width="match_parent"
