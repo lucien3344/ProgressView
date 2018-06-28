@@ -112,6 +112,11 @@ public class ProgessLineView extends View {
         return progress;
     }
 
+    /**
+     * 赋值
+     *
+     * @param progress 进度 float
+     */
     public void setProgress(float progress) {
         this.progress = progress * getWidth() / 100;
         invalidate();
@@ -120,7 +125,9 @@ public class ProgessLineView extends View {
     /**
      * 赋值+执行动画
      *
-     * @param progress 进度 float
+     * @param progressTitle     进度标题 string
+     * @param progress     进度 float
+     * @param RprogressText 单位  string
      */
     public void setDoProgress(String progressTitle, float progress, String RprogressText) {
         this.progress = progress * getWidth() / 100;

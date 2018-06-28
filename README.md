@@ -57,8 +57,9 @@ ProgressView_v1.1
           app:ProgressLine_hight="13dp" />
 
   
+ 第四步： 使用
 
-        circleProgressBar.setProgress(56f, "分");
+        circleProgressBar.setDoProgress(56f, "分");
         progresline_sys.setDoProgress("说一说", 82.0f, "%");
 
 

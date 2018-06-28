@@ -102,14 +102,24 @@ public class ProgressCircleView extends View {
     public float getProgress() {
         return progress;
     }
-
+    /**
+     * 赋值
+     *
+     * @param progress 进度 float
+     */
     public void setProgress(float progress) {
         this.progress = progress * 360 / 100;
         invalidate();// UI thread
         // postInvalidate();//non-UI thread.
     }
 
-    public void setProgress(float progress, String progressText) {
+    /**
+     * 赋值+执行动画
+     *
+     * @param progress 进度 float
+     * @param progressText 单位  string
+     */
+    public void setDoProgress(float progress, String progressText) {
         this.progressText = progress + progressText;
         this.progress = progress;
         //也可使用3.0的AnimationSet实现
@@ -118,14 +128,11 @@ public class ProgressCircleView extends View {
 //      set.setInterpolator(new AccelerateDecelerateInterpolator());
 //      set.start();
 //      this.setAnimation(set);
-
         //4.0以上，在AnimationSet基础上封装的，遗憾的是没有Repeat
         AnimatorSet animation = new AnimatorSet();
-
         ObjectAnimator progressAnimation = ObjectAnimator.ofFloat(this, "progress", 0f, progress);
         progressAnimation.setDuration(500);// 动画执行时间
         progressAnimation.setInterpolator(new AccelerateDecelerateInterpolator());
-
         animation.playTogether(progressAnimation);//动画同时执行,可以做多个动画
         animation.start();
         invalidate();// UI thread
