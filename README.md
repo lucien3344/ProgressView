@@ -1,13 +1,9 @@
 # ProgressView
 ProgressView_v1.1
 
+  用法如下：
 
-
-Step 1. Add the JitPack repository to your build file
-
-gradle
-
-Add it in your root build.gradle at the end of repositories:
+ 第一步： 在项目根目录下的build.gradle中添加如下代码：
 
 	allprojects {
 		repositories {
@@ -15,7 +11,8 @@ Add it in your root build.gradle at the end of repositories:
 			maven { url 'https://jitpack.io' }
 		}
 	}
-Step 2. Add the dependency
+
+ 第二步：项目在app目录下的build.gradle中添加如下代码：
 
 	dependencies {
 	        implementation 'com.github.lucien3344:ProgressView:v1.1'
@@ -23,9 +20,9 @@ Step 2. Add the dependency
   
   
 
-  用法如下：
+ 第三步：在xml中使用如下：
 
-
+    //圆形进度
     <com.lucien3344.progress_view.widget.ProgressCircleView
         android:id="@+id/circleProgressBar"
         android:layout_width="230dp"
@@ -42,7 +39,7 @@ Step 2. Add the dependency
         app:RoundWidth="17dp" />
 
 
-
+      // 线形进度
       <com.lucien3344.progress_view.widget.ProgessLineView
           android:id="@+id/progresline_sys"
           android:layout_width="match_parent"
@@ -63,3 +60,7 @@ Step 2. Add the dependency
 
         circleProgressBar.setProgress(56f, "分");
         progresline_sys.setDoProgress("说一说", 82.0f, "%");
+
+
+
+
