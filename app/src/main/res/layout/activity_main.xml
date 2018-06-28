@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black_8a"
+    android:background="#FEFEFE"
     android:orientation="vertical"
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
@@ -18,10 +18,10 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
         android:visibility="visible"
-        app:RoundColor="@color/color_line"
-        app:RoundProgressColor="@color/toolbar"
+        app:RoundColor="@color/bmColor"
+        app:RoundProgressColor="@color/color"
         app:RoundText=""
-        app:RoundTextColor="@color/black_8a"
+        app:RoundTextColor="@color/color_text"
         app:RoundTextSize="45sp"
         app:RoundWidth="17dp" />
 
@@ -36,9 +36,9 @@
         app:ProgressLine_Text="说一说"
         app:ProgressLine_TextColor="@color/color_text"
         app:ProgressLine_TextSize="15sp"
-        app:ProgressLine_bmColor="@color/color_line"
+        app:ProgressLine_bmColor="@color/bmColor"
         app:ProgressLine_bmHight="13dp"
-        app:ProgressLine_color="@color/toolbar"
+        app:ProgressLine_color="@color/color"
         app:ProgressLine_hight="13dp" />
 
 
@@ -52,9 +52,9 @@
         app:ProgressLine_Text="学一学"
         app:ProgressLine_TextColor="@color/color_text"
         app:ProgressLine_TextSize="15sp"
-        app:ProgressLine_bmColor="@color/color_line"
+        app:ProgressLine_bmColor="@color/bmColor"
         app:ProgressLine_bmHight="13dp"
-        app:ProgressLine_color="@color/undone_60"
+        app:ProgressLine_color="@color/color"
         app:ProgressLine_hight="13dp" />
 
 </LinearLayout>
