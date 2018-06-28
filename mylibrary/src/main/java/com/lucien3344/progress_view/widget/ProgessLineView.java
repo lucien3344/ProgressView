@@ -2,6 +2,7 @@ package com.lucien3344.progress_view.widget;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -44,6 +45,7 @@ public class ProgessLineView extends View {
     private String RprogressText;
 
     protected float progress;
+    protected float maxProgress;
 
     public void setColor(int color) {
         this.color = color;
@@ -67,6 +69,8 @@ public class ProgessLineView extends View {
         bmHight = mTypedArray.getDimensionPixelSize(R.styleable.ProgessLineView_ProgressLine_bmHight, 2);
         color = mTypedArray.getColor(R.styleable.ProgessLineView_ProgressLine_color, Color.BLUE);
         hight = mTypedArray.getDimensionPixelSize(R.styleable.ProgessLineView_ProgressLine_hight, 2);
+        progress = mTypedArray.getInteger(R.styleable.ProgessLineView_ProgressLine_Progress, 0);
+        maxProgress = mTypedArray.getInteger(R.styleable.ProgessLineView_ProgressLine_MaxProgress, 100);
         TextColor = mTypedArray.getColor(R.styleable.ProgessLineView_ProgressLine_TextColor, Color.BLUE);
         TextSize = mTypedArray.getDimensionPixelSize(R.styleable.ProgessLineView_ProgressLine_TextSize, 15);
         progressText = mTypedArray.getString(R.styleable.ProgessLineView_ProgressLine_Text);
@@ -78,7 +82,6 @@ public class ProgessLineView extends View {
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onDraw(Canvas canvas) {
-
         paint.setColor(bmColor);
         paint.setStrokeCap(Paint.Cap.SQUARE);// 圆角
         // paint.setStyle(Paint.Style.FILL); // 设置实心
@@ -91,7 +94,7 @@ public class ProgessLineView extends View {
         paint.setColor(color);
         paint.setStrokeWidth(hight); // 设置笔画的宽度
         //矩形
-        canvas.drawRoundRect(0, getHeight() - bmHight, progress, getHeight(), bmHight / 2, bmHight / 2, paint);
+        canvas.drawRoundRect(0, getHeight() - bmHight, progress * getWidth() / maxProgress, getHeight(), bmHight / 2, bmHight / 2, paint);
 //        rectF.set(0, 0, progress, bmHight);
 //        canvas.drawRect(0, getHeight() - bmHight, progress, getHeight(), paint);
         paint.setStrokeWidth(0);
@@ -115,29 +118,28 @@ public class ProgessLineView extends View {
     /**
      * 赋值
      *
-     * @param progress 进度 float
+     * @param maxProgress 进度 float
      */
-    public void setProgress(float progress) {
-        this.progress = progress * getWidth() / 100;
+    public void setMaxProgress(float maxProgress) {
+        this.maxProgress = maxProgress;
         invalidate();
     }
 
     /**
      * 赋值+执行动画
      *
-     * @param progressTitle     进度标题 string
-     * @param progress     进度 float
+     * @param progressTitle 进度标题 string
+     * @param progress      进度 float
      * @param RprogressText 单位  string
      */
     public void setDoProgress(String progressTitle, float progress, String RprogressText) {
-        this.progress = progress * getWidth() / 100;
+        this.progress = progress;
         this.progressText = progressTitle;
         this.RprogressText = progress + RprogressText;
         AnimatorSet animation = new AnimatorSet();
         ObjectAnimator progressAnimation = ObjectAnimator.ofFloat(this, "progress", 0f, progress);
         progressAnimation.setDuration(500);//动画耗时
         progressAnimation.setInterpolator(new AccelerateDecelerateInterpolator());
-
         animation.playTogether(progressAnimation);
         animation.start();
         invalidate();
@@ -148,9 +150,9 @@ public class ProgessLineView extends View {
      *
      * @param progress 进度 float
      */
-    public void setProgress(String progressTitle, float progress, String RprogressText) {
-        this.progress = progress * getWidth() / 100;
-        this.progressText = progressTitle;
+    @SuppressLint("ObjectAnimatorBinding")
+    public void setProgress(float progress, String RprogressText) {
+        this.progress = progress;
         this.RprogressText = progress + RprogressText;
         invalidate();
     }

@@ -10,9 +10,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        circleProgressBar.setDoProgress(56f, "分")
-        progresline_sys.setDoProgress("说一说", 82.0f, "%")
-        progresline_xyx.setDoProgress("学一学", 25.6f, "%")
+        circleProgressBar.setDoProgress(50f, "分")
+        progresline_sys.setDoProgress("说一说", 80.0f, "%")
+        progresline_xyx.setProgress(25.0f, "MB/100MB")
 
     }
 }

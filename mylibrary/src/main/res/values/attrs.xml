@@ -7,6 +7,8 @@
         <attr name="RoundProgressColor" format="color" />
         <attr name="RoundWidth" format="dimension" />
         <attr name="RoundText" format="string" />
+        <attr name="MaxProgress" format="integer" />
+        <attr name="Progress" format="integer" />
         <attr name="RoundTextSize" format="dimension" />
         <attr name="RoundTextColor" format="color" />
     </declare-styleable>
@@ -21,7 +23,8 @@
         <attr name="ProgressLine_TextColor" format="color" />
         <attr name="ProgressLine_TextSize" format="dimension" />
         <attr name="ProgressLine_Text" format="string" />
-
+        <attr name="ProgressLine_MaxProgress" format="integer" />
+        <attr name="ProgressLine_Progress" format="integer" />
         <attr name="ProgressLine_RTextColor" format="color" />
         <attr name="ProgressLine_RTextSize" format="dimension" />
         <attr name="ProgressLine_RText" format="string" />

@@ -39,6 +39,8 @@ public class ProgressCircleView extends View {
     private int myRoundTextColor;
     /***进度***/
     protected float progress;
+    /***最大进度***/
+    protected float maxProgress;
 
 
     public ProgressCircleView(Context context) {
@@ -61,8 +63,10 @@ public class ProgressCircleView extends View {
         roundWidth = mTypedArray.getDimension(R.styleable.ProgressCircle_RoundWidth, 3);
         roundProgressColor = mTypedArray.getColor(R.styleable.ProgressCircle_RoundProgressColor, Color.RED);
         progressText = mTypedArray.getString(R.styleable.ProgressCircle_RoundText);
+        progress = mTypedArray.getInteger(R.styleable.ProgressCircle_Progress, 0);
+        maxProgress = mTypedArray.getInteger(R.styleable.ProgressCircle_MaxProgress, 100);
         myRoundTextSize = mTypedArray.getDimensionPixelSize(R.styleable.ProgressCircle_RoundTextSize, 15);
-        myRoundTextColor = mTypedArray.getColor(R.styleable.ProgressCircle_RoundProgressColor, Color.BLACK);
+        myRoundTextColor = mTypedArray.getColor(R.styleable.ProgressCircle_RoundTextColor, Color.BLACK);
         mTypedArray.recycle();
     }
 
@@ -85,7 +89,7 @@ public class ProgressCircleView extends View {
         oval.set(centre - radius, centre - radius, centre + radius, centre + radius);
 
         //画圆弧
-        canvas.drawArc(oval, -90, progress, false, paints[0]);
+        canvas.drawArc(oval, -90, progress * 360 / maxProgress, false, paints[0]);
 
         /**
          * 画进中间的text
@@ -102,13 +106,26 @@ public class ProgressCircleView extends View {
     public float getProgress() {
         return progress;
     }
+
+    /**
+     * 赋值
+     *
+     * @param maxProgress 最大进度 float
+     */
+    public void setMaxProgress(float maxProgress) {
+        this.maxProgress = maxProgress;
+        invalidate();// UI thread
+        // postInvalidate();//non-UI thread.
+    }
+
     /**
      * 赋值
      *
      * @param progress 进度 float
      */
     public void setProgress(float progress) {
-        this.progress = progress * 360 / 100;
+        this.progress = progress;
+        this.progressText = progress + "";
         invalidate();// UI thread
         // postInvalidate();//non-UI thread.
     }
@@ -116,7 +133,7 @@ public class ProgressCircleView extends View {
     /**
      * 赋值+执行动画
      *
-     * @param progress 进度 float
+     * @param progress     进度 float
      * @param progressText 单位  string
      */
     public void setDoProgress(float progress, String progressText) {

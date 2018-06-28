@@ -1,5 +1,5 @@
 # ProgressView
-ProgressView_v1.3
+ProgressView_v1.4
 
   用法如下：
 
@@ -15,7 +15,7 @@ ProgressView_v1.3
  第二步：项目在app目录下的build.gradle中添加如下代码：
 
 	dependencies {
-	        implementation 'com.github.lucien3344:ProgressView:v1.3'
+	        implementation 'com.github.lucien3344:ProgressView:v1.4'
 	}
   
   
@@ -31,6 +31,8 @@ ProgressView_v1.3
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp"
             android:visibility="visible"
+            app:MaxProgress="100"
+            app:Progress="0"
             app:RoundColor="@color/bmColor"
             app:RoundProgressColor="@color/color"
             app:RoundText=""
@@ -39,13 +41,18 @@ ProgressView_v1.3
             app:RoundWidth="17dp" />
 
 
-      // 线形进度
+      // 线形进度 1
        <com.lucien3344.progress_view.widget.ProgessLineView
               android:id="@+id/progresline_sys"
               android:layout_width="match_parent"
               android:layout_height="55dp"
               android:layout_gravity="center_horizontal"
+              android:layout_marginLeft="15dp"
+              android:layout_marginRight="15dp"
               android:layout_marginTop="18dp"
+              app:ProgressLine_MaxProgress="100"
+              app:ProgressLine_Progress="0"
+              app:ProgressLine_RText="0%"
               app:ProgressLine_RTextColor="@color/color_text"
               app:ProgressLine_RTextSize="15sp"
               app:ProgressLine_Text="说一说"
@@ -56,11 +63,41 @@ ProgressView_v1.3
               app:ProgressLine_color="@color/color"
               app:ProgressLine_hight="13dp" />
 
+       // 线形进度 2
+          <com.lucien3344.progress_view.widget.ProgessLineView
+              android:id="@+id/progresline_xyx"
+              android:layout_width="match_parent"
+              android:layout_height="55dp"
+              android:layout_marginLeft="15dp"
+              android:layout_marginRight="15dp"
+              android:layout_marginTop="15dp"
+              app:ProgressLine_MaxProgress="100"
+              app:ProgressLine_Progress="0"
+              app:ProgressLine_RText=""
+              app:ProgressLine_RTextColor="@color/color_text"
+              app:ProgressLine_RTextSize="15sp"
+              app:ProgressLine_Text=""
+              app:ProgressLine_TextColor="@color/color_text"
+              app:ProgressLine_TextSize="15sp"
+              app:ProgressLine_bmColor="@color/bmColor"
+              app:ProgressLine_bmHight="13dp"
+              app:ProgressLine_color="@color/color"
+              app:ProgressLine_hight="13dp" />
+
   
  第四步： 使用
 
-        circleProgressBar.setDoProgress(56f, "分");
-        progresline_sys.setDoProgress("说一说", 82.0f, "%");
+              circleProgressBar.setDoProgress(50f, "分")
+              progresline_sys.setDoProgress("说一说", 80.0f, "%")
+              progresline_xyx.setProgress(25.0f, "MB/100MB")
+
+
+
+  v1.4更新说明：       新增设置最大进度
+
+
+
+
 
 
 
