@@ -1,5 +1,5 @@
 # ProgressView
-ProgressView_v1.2
+ProgressView_v1.3
 
   用法如下：
 
@@ -15,7 +15,7 @@ ProgressView_v1.2
  第二步：项目在app目录下的build.gradle中添加如下代码：
 
 	dependencies {
-	        implementation 'com.github.lucien3344:ProgressView:v1.2'
+	        implementation 'com.github.lucien3344:ProgressView:v1.3'
 	}
   
   
