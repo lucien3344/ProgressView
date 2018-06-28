@@ -90,13 +90,14 @@
           progresline_sys.setDoProgress("说一说", 80.0f, "%")
           progresline_xyx.setProgress(25.0f, "MB/100MB")
 
- 效果：
- ![image](https://github.com/lucien3344/ProgressView/blob/16c77a86ab333c2685bc52b679484fe1b63ae369/sample_image.png)
+
+ 效果： ![image](https://github.com/lucien3344/ProgressView/blob/16c77a86ab333c2685bc52b679484fe1b63ae369/sample_image.png)
 
 
  v1.4更新说明：       新增设置最大进度
 
 
+![]
  关于我：  邮箱：lsh_2012@qq.com
 
 
