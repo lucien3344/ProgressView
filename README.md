@@ -96,7 +96,7 @@
  ![ProgressView_v1.5](https://github.com/lucien3344/ProgressView/blob/16c77a86ab333c2685bc52b679484fe1b63ae369/sample_image.png)
 
 
- v1.4更新说明：       新增设置最大进度
+
 
 
 
