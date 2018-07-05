@@ -1,4 +1,4 @@
-# ProgressView_v1.4
+# ProgressView_v1.5
 
  用法如下：
 
@@ -14,7 +14,7 @@
  第二步：项目在app目录下的build.gradle中添加如下代码：
 
 	dependencies {
-	        implementation 'com.github.lucien3344:ProgressView:v1.4'
+	        implementation 'com.github.lucien3344:ProgressView:v1.5'
 	}
   
   
@@ -93,7 +93,7 @@
 
  效果图：
 
- ![ProgressView_v1.4](https://github.com/lucien3344/ProgressView/blob/16c77a86ab333c2685bc52b679484fe1b63ae369/sample_image.png)
+ ![ProgressView_v1.5](https://github.com/lucien3344/ProgressView/blob/16c77a86ab333c2685bc52b679484fe1b63ae369/sample_image.png)
 
 
  v1.4更新说明：       新增设置最大进度
